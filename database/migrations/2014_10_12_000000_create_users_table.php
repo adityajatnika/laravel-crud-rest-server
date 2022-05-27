@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('nama');
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('jenis_kelamin');
-            $table->string('status');
-            $table->string('pekerjaan');
-            $table->string('pendidikan');
+            $table->string('jenis_kelamin')->nullable();
+            $table->string('status')->nullable();
+            $table->string('pekerjaan')->nullable();
+            $table->string('pendidikan')->nullable();
             $table->timestamps();
         });
     }
