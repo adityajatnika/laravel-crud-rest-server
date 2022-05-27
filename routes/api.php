@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EkonomiController;
 use App\Http\Controllers\KeluargaController;
 use App\Http\Controllers\LokasiController;
 use Illuminate\Http\Request;
@@ -19,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['json.response', 'auth']], function () {
     Route::apiResource('keluarga', KeluargaController::class);
     Route::apiResource('lokasi', LokasiController::class);
+    Route::apiResource('ekonomi', EkonomiController::class);
 });
